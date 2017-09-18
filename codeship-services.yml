@@ -15,4 +15,5 @@ services:
 
   monstereye-server:
     build:
+      dockerfile: Dockerfile
       image: gcr.io/bananalab-001/monstereye-server
