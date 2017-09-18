@@ -1,0 +1,5 @@
+- service: app
+  type: push
+  image_name: gcr.io/bananalabs-001/minecraft
+  registry: https://gcr.io
+  dockercfg_service: gcr_dockercfg
