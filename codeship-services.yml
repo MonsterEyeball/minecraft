@@ -1,11 +1,17 @@
-gcr_dockercfg:
-  image: codeship/gcr-dockercfg-generator
-  add_docker: true
-  encrypted_env_file: gcp.enc
+version: '2'
 
-googleclouddeployment:
-  image: codeship/google-cloud-deployment
-  encrypted_env_file: gcp.enc
-  add_docker: true
-  volumes:
-    - ./:/deploy
+services:
+  gcr_dockercfg:
+    image: codeship/gcr-dockercfg-generator
+    add_docker: true
+    encrypted_env_file: gcp.enc
+
+  googleclouddeployment:
+    image: codeship/google-cloud-deployment
+    encrypted_env_file: gcp.enc
+    add_docker: true
+    volumes:
+      - ./:/deploy
+
+  minecraft-server:
+    build: .
