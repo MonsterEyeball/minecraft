@@ -1,0 +1,86 @@
+dont_have_permission: '&cYou don''t have permission to do that!'
+verify-updates: true
+use-metrics: true
+worlds:thehubworld
+  Spawn:
+    teleportation:
+      onConnection:
+        enabled: true
+        #quickly toggle this feature
+        teleportTo: serverSpawn
+        #may be "location", "worldSpawn" or "serverSpawn"
+        location:
+        #if you use "location", ignore otherwise
+          x: 0
+          y: 0
+          z: 0
+          world: Spawn
+        sendMessage: false
+        #if you want to send a message
+        message: 'This message appears when you are teleported.'
+        #the message
+    commands:
+      onConnection:
+      #this event is fired when a player join the server in this world
+        enabled: true
+        #quickly toggle this feature
+        commands:
+        - clear %player%
+        - ekit spawn %player%
+        #the commands (without "/")
+      onDisconnection:
+      #this event is fired when a player leave the server from this world
+        enabled: false
+        commands:
+        - broadcast %player% left the game :(
+      onWorldChangeTo:
+      #this event is fired when a player switch from another world to this world
+        enabled: true
+        commands:
+        - clear %player%
+        - ekit spawn %player%
+      onWorldChangeFrom:
+      #this event is fired when a player switch from this world to another world
+        enabled: false
+        commands:
+        - tell %player% You are leaving the spawn!
+      onDeath:
+      #this event is fired when a player is dying
+        enabled: false
+        commands:
+        - tell %player% You are dying!
+      onRespawn:
+      #this event is fired when a player respawns
+        enabled: false
+        commands:
+        - tell %player% You are respawning!
+  Minigames:
+    teleportation:
+      onConnection:
+        enabled: true
+        teleportTo: worldSpawn
+        location:
+          x: 0
+          y: 0
+          z: 0
+          world: Spawn
+        sendMessage: false
+        message: '&aYou''ve just been teleported to the server spawn !'
+    commands:
+      onConnection:
+        enabled: true
+        commands:
+        - clear %player%
+        - scoreboard players reset %player%
+        - scoreboard teams leave %player%
+      onWorldChangeTo:
+        enabled: true
+        commands:
+        - minecraft:clear %player%
+        - scoreboard teams leave %player%
+        - scoreboard players reset %player%
+      onWorldChangeFrom:
+        enabled: true
+        commands:
+        - scoreboard teams leave %player%
+        - scoreboard players reset %player%

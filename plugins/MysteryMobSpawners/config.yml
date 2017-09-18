@@ -1,0 +1,147 @@
+# Mystery Mob Spawners v3.0.4 Config
+# 
+# In the spawner-outputs section you can define the spawners that can be recieved
+# from the Mystery Mob Spawner. Make sure to use one of the following otherwise it
+# won't work.
+# 
+# Bat, Chicken, Cow, MushroomCow, Pig, Rabbit, Sheep, Squid, Villager, CaveSpider,
+# Enderman, Spider, PigZombie, Blaze, Creeper, Endermite, Ghast, Guardian,
+# VillagerGolem, SilverFish, Skeleton, Slime, Witch, Zombie, Wolf, EnderDragon,
+# Villager, LavaSlime, SnowMan.
+# 
+# If you can't find the name of a mob that you want to add, go to the wiki at:
+# http://minecraft.gamepedia.com/ and then search the mob name. Then on the right
+# of the page scroll down a bit until you find 'Savegame ID xxxxxx' and then use
+# '/mms add xxxxxx' replacing the 'xxxxxx' with the Savegame ID.
+# 
+# For the spawner chances you can set the chance of the spawners output, the values
+# can equal more then 100% if you like.
+# This area does not accept the decimal values for the time being, so please don't
+# use them because it will just give an error or not work correctly.
+# 
+# In the CustomDrops section you can def ine the custom drops including the EXP and the item(s).
+# If you use a number then the letter 'r' in the item amount it will choose a random number
+# from 1 to the number that you put infront of the 'r' for the drop amount.
+# To leave something to default don't set it at all in the config, an example
+# of this is below in the CustomDrops section.
+Messages:
+  NoPermission: '&4You do not have access to that command.'
+  InvalidArguments: '&8[ &6MMS &8] &cInvalid arguments! Use /mms for more help on
+    this command.'
+  InvalidFormat: '&8[ &6MMS &8] &c%args% is an invalid number!'
+  InvalidNumber: '&8[ &6MMS &8] &c%numb% is an invalid number, make sure to make it
+    greater then 0!'
+  PlayerOffline: '&8[ &6MMS &8] &c%player% is not an invalid player! This is probably
+    because they are offline.'
+  RecievedMMS: '&8[ &6MMS &8] &7You have recieved a Mystery Mob Spawner.'
+  InventoryFull: '&8[ &6MMS &8] &cYour inventory was full so the Mystery Mob Spawner
+    was dropped at your feet.'
+  AddedToList: '&8[ &6MMS &8] &7You have added &f%type% &7to the list of spawner outputs!
+    Make sure to also edit the lore of the Mystery Mob Spawner!'
+  RemovedFromList: '&8[ &6MMS &8] &7You have removed &f%type% &7from the list of spawner
+    outputs! Make sure to also edit the lore of the Mystery Mob Spawner!'
+  ListDoesntContain: '&8[ &6MMS &8] &cThe Spawner-Output list does not contain %type%
+    !'
+  ListAlreadyContains: '&8[ &6MMS &8] &cThe Spawner-Output list already contains %type%
+    !'
+  InvalidMob: '&8[ &6MMS &8] &c%type% is an invalid mob! Please specify a real mob
+    to add to the list.'
+  ReloadComplete: '&8[ &6MMS &8] &bYou have successfully reloaded the config.yml file!'
+  NotEnoughInventory: '&8[ &6MMS &8] &cYou do not have enough inventory room to purchase
+    this item!'
+  InsufficientFunds: '&cError: &4you do not have enough money.'
+  SignCreated: '&8[ &6MMS &8] &7You have successfully created a buy sign for Mystery
+    Mob Spawner.'
+  SuccessfulPurchase: '&8[ &6MMS &8] &7You have purchased x&8{x} &7Mystery Spawners
+    for &f${cost}.'
+  ListEmpty: '&8[ &6MMS &8] &7The Spawner-Output list is empty, therefore you didnt
+    get any rewards.'
+  NoItem: '&8[ &6MMS &8] &7You do not have any mystery spawners in your inventory
+    to sell.'
+  SuccessfulSold: '&8[ &6MMS &8] &7You have successfully sold x&8{x} &7Mystery Spawners
+    for &f${cost}.'
+  MustBePlayer: '&c&l(!)&c you must be a player to use this feature!'
+  Help:
+  - '&8&l&m----------&r&8&l[ &6Mystery Mob Spawners &8&l]&m----------'
+  - '&7'
+  - '&b/mms give {player} {amount} &f- &7Gives a player one Mystery Mob Spawner.'
+  - '&b/mms giveall {amount} &f- &7Gives all online players a Mystery Mob Spawner.'
+  - '&b/mms reload &f- &7Reloads the config file.'
+  - '&b/mms add {mob name} &f- &7Adds a mob to the spawner-outputs list.'
+  - '&b/mms remove {mob name} &f- &7Removes a mob from the spawner-outputs list if
+    it contains it.'
+  - '&b/mms buy {x} &f- &7Allows you to buy the specified amount of mystery spawners.'
+  - '&7'
+  - '&8&l&m----------&r&8&l[ &6Mystery Mob Spawners &8&l]&m----------'
+Item:
+  Cost: 1000000
+  SellPrice: 500000
+  Name: '&6&lMystery Mob Spawner'
+  Lore:
+  - '&7Right-click in hand to reveal one'
+  - '&7of the following mob spawner types:'
+  - '&7'
+  - '&6&lx &7Enderman'
+  - '&6&lx &7Pigzombie'
+  - '&6&lx &7Cow'
+  - '&6&lx &7Creeper'
+  - '&6&lx &7Blaze'
+  - '&6&lx &7Iron Golem'
+  - '&6&lx &eMooshroom Cow'
+  - '&6&lx &eMagma Cube'
+  - '&6&lx &eGhast'
+Spawner:
+  Name: '&6&l%type% Spawner'
+  Lore:
+  - ''
+Spawner-Outputs:
+  ENDERMAN: 20
+  PIGZOMBIE: 20
+  COW: 20
+  CREEPER: 15
+  BLAZE: 10
+  VILLAGERGOLEM: 5
+  MUSHROOMCOW: 5
+  LAVASLIME: 2
+  GHAST: 3
+Signs:
+  Buy:
+    Line-1: '[ &1Buy &0]'
+    Line-2: '{x}'
+    Line-3: MysterySpawner
+    Line-4: ${cost}
+  Sell:
+    Line-1: '[ &1Sell &0]'
+    Line-2: '{x}'
+    Line-3: MysterySpawner
+    Line-4: ${sell}
+CustomDrops:
+  GHAST:
+    EXP: 500
+    Item:
+      Type: 264
+      Amount: 1
+      Meta-Data: 0
+      Name: '&cAwesome name here!'
+      Lore:
+      - '&7If you dont want a custom lore'
+      - '&7or custom name just delete these'
+      - '&7sections for the default settings.'
+  CREEPER:
+    EXP: 1500
+    Item:
+      Type: 265
+      Amount: 5r
+      Meta-Data: 0
+      Name: '&cAwesome name here!'
+      Lore:
+      - '&7If you dont want a custom lore'
+      - '&7or custom name just delete these'
+      - '&7sections for the default settings.'
+  COW:
+    EXP: 200
+  PIG:
+    Item:
+      Type: 266
+      Amount: 1
+      Meta-Data: 0

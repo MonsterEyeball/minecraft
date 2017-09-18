@@ -1,0 +1,3 @@
+ClassPath: jdbc:mysql://
+SQLite: false
+allowMultiQueries: true

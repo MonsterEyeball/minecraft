@@ -1,0 +1,29 @@
+# bottleName: This is a name of bottle you can change this have u want.
+# bottleEnchanter: Here you can add person witch have transfer Xp to Bottle
+# value: Make one free space between like this:"&5 %value% &fXp".
+# adminName: Here you can put Server name if u want this is used when admin give xp bottle /xpbottle <amount> <playername>
+# MinXp: You can set minimum xp witch player can store in bottle.
+# dropPercentage:You can set percentage of xp witch will be droped example player on death have 1000Xp u have set 70% in config he will drop 700Xp.
+BottleName: "&a&lExperience Bottle &7(Throw)"
+BottleEnchanter: "&dEnchanter&r %player%"
+Value: "&dValue&r %value% XP"
+AdminName: "&dEnchanter &rBeastTinkerer"
+MinXp: 25
+MaxXp: 1000
+DropPercentage: 100
+Messages:
+ NotEnough: "You only have %pxp%!"
+ Xpb:
+  - "&e/xpbottle <amount>"
+  - "&7Convert <amount> xp into bottle form."
+  - "&7Use &e/xp &7to view your current exp points."
+ XpTransferred: 
+  - "&aYour Xp is Transfered to bottle!"
+  - "&c&l- %takenxp% Xp"
+ FullInventory: "&cYour Inventory is full please make some space!"
+ MinXpMessage: "&cYou must withdraw at last %minxp% Xp points per bottle."
+ MaxXpMessage: "&cYou can put %maxxp% Xp to Bottle Max!"
+ CantFind: "&cCan t find %target%!"
+ BottleRecive: "&bPlayer has recive %xp%!"
+ NoPermission: "&4You don t have that permission."
+ NoNumber: "&4That is not a Number!"

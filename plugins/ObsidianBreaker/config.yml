@@ -1,0 +1,25 @@
+# - Main Configuration - ##
+#        Developed        #
+#           by            #
+#      CaptainCalex       #
+###########################
+# You can disable the plugins entire purpose and just use the custom durability!
+TurnOff_Obby_TNT: false
+Use_Drop_Limiter: true
+# This value subtracts the number from the total amount of obsidian in the blast.
+# So say the total amount of Obsidian is 10 in the blast and the Drop_Limit_Amount
+# is 7, only 3 Obsidian will drop from the blast.
+Drop_Limit_Amount: 5
+# - Extra Settings - #
+H20_TNT: true
+Use_TNT_entity: true
+# - Logger Settings - #
+Report_Explosions: false
+# - Custom Block Configurations - #
+#ENCHANTMENT_TABLE:
+  #Durability: 0
+  #Break_Naturally: true
+# Example:
+ENCHANTMENT_TABLE:
+  Durability: 1
+  Break_Naturally: true
