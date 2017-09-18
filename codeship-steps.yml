@@ -1,5 +1,0 @@
-- service: monstereye-server
-  type: push
-  image_name: gcr.io/bananalab-001/monstereye-server
-  registry: https://gcr.io
-  dockercfg_service: gcr_dockercfg
