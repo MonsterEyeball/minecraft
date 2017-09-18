@@ -14,4 +14,6 @@ services:
       - ./:/deploy
 
   minecraft-server:
-    build: .
+    build:
+      image: gcr.io/bananalab-001/monstereye-server
+      dockerfile_path: .Dockerfile
